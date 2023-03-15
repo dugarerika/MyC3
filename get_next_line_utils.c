@@ -6,9 +6,20 @@
 /*   By: etavera- <etavera-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 09:33:20 by etavera-          #+#    #+#             */
-/*   Updated: 2023/03/13 13:05:52 by etavera-         ###   ########.fr       */
+/*   Updated: 2023/03/15 13:37:48 by etavera-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
+int	ft_strlen(const char *str)
+{
+	int	r;
+
+	r = 0;
+	while (str[r] != '\0')
+	{
+		r++;
+	}
+	return (r);
+}

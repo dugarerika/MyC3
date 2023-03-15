@@ -6,7 +6,7 @@
 /*   By: etavera- <etavera-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 12:02:09 by etavera-          #+#    #+#             */
-/*   Updated: 2023/03/15 10:15:26 by etavera-         ###   ########.fr       */
+/*   Updated: 2023/03/15 13:38:18 by etavera-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,5 @@
 
 
 char	*get_next_line(int fd);
+int		ft_strlen(const char *str);
 #endif

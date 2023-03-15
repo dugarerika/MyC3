@@ -6,7 +6,7 @@
 /*   By: etavera- <etavera-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 09:32:55 by etavera-          #+#    #+#             */
-/*   Updated: 2023/03/15 11:18:07 by etavera-         ###   ########.fr       */
+/*   Updated: 2023/03/15 13:56:33 by etavera-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,24 @@
 char *get_next_line(int fd)
 {
 int n;
+int i;
 char *c;
 char buff[1024];
 
 c = NULL;
 n = read(fd, buff, 1024);
-if (n == -1)
-		printf("An error occurred while trying to read the file %i '", n);
-else
-	printf("%s", buff);
+i = ft_strlen(buff);
+printf("%i", i);
+if (n != -1)
+	while (buff[i] != '\')
+	{
+		if (buff[i] != '\n' && buff[i + 1] !='\0')
+			write(1, &buff[i], 1);
+			i++;
+		i++;
+	}
+
+
 return(c);
 }
 

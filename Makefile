@@ -1,5 +1,5 @@
 
-SRCS			= get_next_line.c
+SRCS			= get_next_line_utils.c get_next_line.c
 OBJS			= $(SRCS:.c=.o)
 
 CC				= gcc
