@@ -6,21 +6,26 @@
 /*   By: erikadugar <erikadugar@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 09:32:55 by etavera-          #+#    #+#             */
-/*   Updated: 2023/03/17 10:14:47 by erikadugar       ###   ########.fr       */
+/*   Updated: 2023/03/17 13:34:14 by erikadugar       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int get_next_line(int fd)
+char *get_next_line(int fd)
 {
 int n;
+int j;
+int longitud;
 static int i;
-char *c;
 char duff[1024];
+char	*acum;
 
-c = NULL;
+j = 0;
 n = read(fd, duff, 1024);
+longitud = ft_strlen(duff);
+acum = NULL;
+acum = malloc(longitud);
 if (n != -1)
 {
 	while (duff[i] != '\0')
@@ -32,12 +37,15 @@ if (n != -1)
 			break;
 		}
 		else
-			write(1, &duff[i], 1);
+		{
+			acum[j] = duff[i];
+			write(1, &duff[i], 1);	
+		}
 		i++;
 	}
 }
-
-return(i);
+return(acum);
+free(acum);
 }
 
 # include <fcntl.h>
@@ -50,6 +58,11 @@ int main()
 	char path[] = "/Users/erikadugar/Desktop/example.txt";
 	fd = open(path, O_RDONLY);
 	get_next_line(fd);
-	// get_next_line(fd);
+	get_next_line(fd);
+	get_next_line(fd);
+	get_next_line(fd);
+	get_next_line(fd);
+	get_next_line(fd);
+	get_next_line(fd);
 
 }

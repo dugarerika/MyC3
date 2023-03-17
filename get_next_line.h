@@ -6,7 +6,7 @@
 /*   By: erikadugar <erikadugar@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 12:02:09 by etavera-          #+#    #+#             */
-/*   Updated: 2023/03/17 09:41:01 by erikadugar       ###   ########.fr       */
+/*   Updated: 2023/03/17 13:26:45 by erikadugar       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-
-int	get_next_line(int fd);
+char *rev(char *tab);
+char *get_next_line(int fd);
 int		ft_strlen(const char *str);
 #endif
